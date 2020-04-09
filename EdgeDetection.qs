@@ -1,8 +1,8 @@
-namespace HelloWorld {
+namespace Quantum.quantum_edgedetection {
     open Microsoft.Quantum.Intrinsic;
     open Microsoft.Quantum.Canon;
 
-    operation SayHello() : Unit {
+    operation EdgeDetection() : Unit {
         Message("Hello from quantum world!");
     }
 }
