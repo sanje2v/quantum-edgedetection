@@ -2,9 +2,13 @@ namespace Quantum.quantum_edgedetection {
     open Microsoft.Quantum.Intrinsic;
     open Microsoft.Quantum.Canon;
 
-    operation EdgeDetection(int : n_qubits) : Unit {
-        Message("Hello from quantum world!");
+    operation EdgeDetection(n_qubits : Int) : Unit {
+        Message("Edge detection in quantum world!");
 
-        using (var registers = Q)
+        using (registers = Qubit[n_qubits]) {
+            
+
+            ResetAll(registers);
+		}
     }
 }

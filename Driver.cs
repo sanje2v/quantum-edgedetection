@@ -20,10 +20,10 @@ namespace Quantum.quantum_edgedetection
             {
                 org_img.Dispose();
 
-                var data = new byte[img.Height * img.Width];
+                var data = new double[img.Height * img.Width];
                 for (var i = 0; i < img.Width; ++i)
                     for (var j = 0; j < img.Height; ++j)
-                        data[i * img.Height + j] = img.GetPixel(i, j).R;
+                        data[i * img.Height + j] = (img.GetPixel(i, j).R / 255.0d);
 
                 var n_qubits = (int)Math.Log2(data.Length);
                 using (var qsim = new QuantumSimulator())
